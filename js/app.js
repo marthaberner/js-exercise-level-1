@@ -4,7 +4,9 @@
     var departureCity = document.getElementById("departure-city").value;
     var arrivalCity = document.getElementById("arrival-city").value;
     var bags = document.getElementById("num-bags").value;
-    var fare = calculateFare(departureCity, arrivalCity, bags);
+    var travelClass = document.getElementById("travel-class").value;
+    var wifi = document.getElementById("wifi").checked;
+    var fare = calculateFare(departureCity, arrivalCity, bags, travelClass, wifi);
     showFare(fare);
     event.preventDefault();
   });
