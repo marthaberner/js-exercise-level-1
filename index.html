@@ -5,7 +5,7 @@
 </head>
 <body>
 <div class="container">
-    <h1>Welcome to YouTravel!</h1>
+    <h1>Air Fare Calculator</h1>
   <form id="travel-query" action="" method="get">
     <div class="departure">
       <label for="departure-city">Departure City</label>
@@ -25,34 +25,37 @@
       <label for="arrival-city">Arrival City</label>
       <select id="arrival-city" name="arrival-city">
         <option>
-          New York
+          Los Angeles
         </option>
         <option>
           Chicago
         </option>
         <option>
-          Los Angeles
+          New York
         </option>
       </select>
     </div>
     <div class="bags">
-      <label for="num-bags">Number of checked bags</label>
-      <input id="num-bags" type="text" name="num-bags" value="">
+      <label for="num-bags">Number of checked bags ($25 / bag)</label>
+      <input id="num-bags" type="number" name="num-bags" value="">
     </div>
     <div class="pass-class">
       <label for="travel-class">Travel Class</label>
       <select id="travel-class" name="travel-class">
         <option>
-          1st Class
+          Coach
         </option>
         <option>
-          Coach
+          Business (+ $200)
+        </option>
+        <option>
+          First (+ $500)
         </option>
       </select>
     </div>
     <div class="wifi">
       <input id="wifi" type="checkbox" name="wifi" value="">
-      <label for="wifi">Wifi</label>
+      <label for="wifi">Wifi ($12)</label>
     </div>
     <div class="discount">
       <label for="discount-code">Discount Code</label>
