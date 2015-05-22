@@ -1,0 +1,14 @@
+{
+  "New York" : {
+    "Los Angeles" : 15,
+    "Chicago" : 10
+  },
+  "Chicago" : {
+    "Los Angeles" : 10,
+    "New York" : 7
+  },
+  "Los Angeles" : {
+    "Chicago" : 10,
+    "New York" : 15
+  }
+};

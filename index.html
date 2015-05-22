@@ -1,0 +1,75 @@
+<html>
+<head>
+  <title>Air Travel Calculator</title>
+  <link rel="stylesheet" href="css/style.css" charset="utf-8">
+</head>
+<body>
+<div class="container">
+    <h1>Welcome to YouTravel!</h1>
+  <form id="travel-query" action="" method="get">
+    <div class="departure">
+      <label for="departure-city">Departure City</label>
+      <select id="departure-city" name="departure-city">
+        <option>
+          New York
+        </option>
+        <option>
+          Chicago
+        </option>
+        <option>
+          Los Angeles
+        </option>
+      </select>
+    </div>
+    <div class="arrival">
+      <label for="arrival-city">Arrival City</label>
+      <select id="arrival-city" name="arrival-city">
+        <option>
+          New York
+        </option>
+        <option>
+          Chicago
+        </option>
+        <option>
+          Los Angeles
+        </option>
+      </select>
+    </div>
+    <div class="bags">
+      <label for="num-bags">Number of checked bags</label>
+      <input id="num-bags" type="text" name="num-bags" value="">
+    </div>
+    <div class="pass-class">
+      <label for="travel-class">Travel Class</label>
+      <select id="travel-class" name="travel-class">
+        <option>
+          1st Class
+        </option>
+        <option>
+          Coach
+        </option>
+      </select>
+    </div>
+    <div class="wifi">
+      <input id="wifi" type="checkbox" name="wifi" value="">
+      <label for="wifi">Wifi</label>
+    </div>
+    <div class="discount">
+      <label for="discount-code">Discount Code</label>
+      <input id="discount-code" type="text" name="discount-code" value="">
+    </div>
+    <div class="submit">
+      <input id="get-fare" type="submit" value="Calculate Price">
+    </div>
+  </form>
+
+  <div id="results">
+
+  </div>
+</div>
+
+
+  <script src="js/calculator.js" type="text/javascript"></script>
+  <script src="js/app.js" type="text/javascript"></script>
+</body>
+</html>
