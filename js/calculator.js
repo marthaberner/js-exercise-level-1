@@ -1,4 +1,3 @@
-
 var fares = {
   "New York" : {
     "Los Angeles" : 15,
@@ -15,11 +14,7 @@ var fares = {
 };
 
 function calculateBagFee(bags) {
-  if(bags > 0) {
-    return bags*25;
-  } else {
-    return 0;
-  }
+  return bags*25;
 };
 
 function calculateClassFee(travelClass) {
@@ -32,28 +27,40 @@ function calculateClassFee(travelClass) {
   }
 };
 
-function showFare(fare) {
+function calculateDiscount(code) {
+  var discount = 0;
+
+  if(code === "10OFF") {
+    discount = .10;
+  } else if(code === "20OFF") {
+    discount = .20;
+  }
+
+  return discount;
+};
+
+function showFare(result) {
   var div = document.getElementById("results");
-  div.innerHTML = "<h2>" + fare + "</h2>";
+  div.innerHTML =  result;
 };
 
 function calculateWifi(wifi) {
-  if(wifi === true) {
-    return 12;
-  } else {
-    return 0;
-  }
+  return wifi ? 12 : 0;
 };
 
 function calculateFare(departureCity, arrivalCity, bags, travelClass, wifi) {
-  if(departureCity === arrivalCity) {
-    return "Your fare is unavailable. You must actually go somewhere.";
+  if((departureCity === arrivalCity) || (arrivalCity === "Choose A City" || departureCity === "Choose A City")){
+    showFare("<h3>The information you entered is invalid.</h3>");
   } else {
     var bagFee = calculateBagFee(bags);
     var fare = fares[departureCity][arrivalCity];
     var classFee = calculateClassFee(travelClass);
     var wifiFee = calculateWifi(wifi);
     fare += (bagFee + classFee + wifiFee);
-    return "<h3>Your price is: $" + fare + "</h3>";
+    showFare("<h3>Your price is: $" + fare + "</h3>");
   }
 };
+
+function getElementValue(id) {
+  return document.getElementById(id).value;
+}
